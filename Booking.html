@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffd700; /* Change color on hover */
+        }
+        nav img {
+            width: 100px; /* Adjust as needed */
+            height: auto;
+            margin-left: 900px; /* Move logo to the right */
+        }
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .bookbutton {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.3s ease;
+        }
+        .bookbutton:hover {
+            background-color: #0056b3; /* Change color on hover */
+        }
+        #emailValidation {
+            color: red;
+            display: none;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="lawyers.html">Lawyers</a>
+            <a href="practice2.html">PracticeArea</a>
+            <img src="logo.png" alt="Logo">
+        </nav>
+    </header>
+    <h2>BOOK YOUR LAWYER</h2>
+    <div class="container">
+        <form id="bookingForm">
+            <div class="mb-3">
+                <label for="caseType" class="form-label">Case Type:</label>
+                <input type="text" class="form-control" id="caseType" placeholder="">
+            </div>
+            <div class="mb-3">
+                <!-- <label for="lawyerName" class="form-label">Lawyer's Name:</label> -->
+                <!-- <input type="text" class="form-control" id="lawyerName"> -->
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email">
+                <div id="emailValidation">Please include "@" in the email address.</div>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Date:</label>
+                <input type="date" class="form-control" id="date" name="date">
+            </div>
+            <button type="submit" class="bookbutton">Book Now</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <footer style="text-align: center; background-color: black; padding: 10px; color: #fff;">
+        <p>&copy; 2024 Abdiweli &Co Advocates. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // Perform form validation
+            let caseType = document.getElementById("caseType").value.trim();
+            // let lawyerName = document.getElementById("lawyerName").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let date = document.getElementById("date").value;
+            
+            if (caseType === "" || lawyerName === "" || email === "" || date === "") {
+                alert("Please fill out all fields.");
+            } else if (!email.includes("@")) {
+                document.getElementById("emailValidation").style.display = "block";
+            } else {
+                // Book appointment successfully
+                alert("Appointment booked successfully.");
+                // You can add additional functionality here, like submitting the form data to a server
+            }
+        });
+    </script>
+
+</body>
+</html>

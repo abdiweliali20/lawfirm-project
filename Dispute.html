@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+        }
+        nav a {
+            text-decoration: none;
+            padding: 8px 15px;
+            margin-right: 10px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+        }
+        h1, p {
+            margin-left: 20px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-left: 150px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between; align-items: center; background-color: #333; padding: 10px;">
+        <nav>
+            <a href="home.html" style="color: #fff; text-decoration: none; padding: 8px 15px; margin-right: 10px; border-radius: 5px; background-color: #4CAF50;">Home</a>
+            <a href="lawyers.html" style="color: #fff; text-decoration: none; padding: 8px 15px; border-radius: 5px; background-color: #4CAF50;">Lawyers</a>
+            <a href="practice2.html" style="color: #fff; text-decoration: none; padding: 8px 15px; border-radius: 5px; background-color: #4CAF50;">Practice Area</a>
+        </nav>
+        <img src="logo.png" alt="" width="150px" height="100px">
+    </header>
+    <div class="grid-container">
+        <div>
+        <h1>Dispute Resolution</h1>
+        <p>Our Team has represented clients on various disputes on different fora in Kenya. We offer dispute resolution and arbitration services tailor-made to fit the desired outcome and needs of our clients.</p>
+    </div>
+    <div>
+        <img src="chess.jpeg" alt="">
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer style="text-align: center; background-color: black; padding: 10px; color: #fff;">
+        <p>&copy; 2024 Abdiweli &Co Advocates. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
